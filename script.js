@@ -4,7 +4,11 @@ let computerScore = 0;
 let round = 0
 
 
-let startGame  = setInterval(() => {playGame()}, 1000)
+let startGame;
+
+if(confirm('start game')){
+  startGame = setInterval(() => {playGame()}, 1000)
+}
 
 const getComputerChoice = () => {
   let computerChoice = Math.floor(Math.random() * choices.length);
@@ -31,6 +35,12 @@ function playRound(humanChoice, computerChoice) {
       } else{
         alert(`game over! computer won\n computer-points(${computerScore})\n human-points: (${humanScore})`)
         clearInterval(startGame)
+
+        if(confirm('next game')){
+          round = 0
+          startGame = setInterval(() => {playGame()}, 1000)
+        }
+        
       }
     }
 
@@ -72,5 +82,6 @@ function playGame() {
   return console.log(round)
 
 }
+
 
 

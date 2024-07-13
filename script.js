@@ -9,7 +9,7 @@ const getComputerChoice = () => {
 };
 
 const getHumanChoice = () => {
-  let humanChoice = prompt("choose (rock, paper, scissors)");
+  let humanChoice = prompt(`round ${round}\nchoose (rock, paper, scissors)`);
   return humanChoice;
 };
 

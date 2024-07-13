@@ -32,15 +32,11 @@ function playRound(humanChoice, computerChoice) {
       if(humanScore > computerScore){
         alert(`game over! human won\n human-points: (${humanScore})\n computer-points: (${computerScore})`)
         clearInterval(startGame)
+        restartGame()
       } else{
         alert(`game over! computer won\n computer-points(${computerScore})\n human-points: (${humanScore})`)
         clearInterval(startGame)
-
-        if(confirm('next game')){
-          round = 0
-          startGame = setInterval(() => {playGame()}, 1000)
-        }
-        
+        restartGame()
       }
     }
 
@@ -80,6 +76,15 @@ function playGame() {
   playRound(humanSelection, computerSelection)
 
   return console.log(round)
+
+}
+
+function restartGame(){
+
+  if(confirm('next game')){
+    round = 0
+    startGame = setInterval(() => {playGame()}, 1000)
+  }
 
 }
 

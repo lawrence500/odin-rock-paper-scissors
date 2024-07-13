@@ -1,6 +1,8 @@
 const choices = ["rock", "paper", "scissors"];
 let humanScore = 0;
 let computerScore = 0;
+
+let maxRounds = 5
 let round = 0
 
 
@@ -28,7 +30,7 @@ function playRound(humanChoice, computerChoice) {
   humanChoice = humanChoice.toLowerCase();
     round++
 
-    if (round >= 6){
+    if (round >= maxRounds){
       if(humanScore > computerScore){
         alert(`game over! human won\n human-points: (${humanScore})\n computer-points: (${computerScore})`)
         clearInterval(startGame)

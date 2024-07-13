@@ -3,6 +3,9 @@ let humanScore = 0;
 let computerScore = 0;
 let round = 0
 
+
+let startGame  = setInterval(() => {playGame()}, 1000)
+
 const getComputerChoice = () => {
   let computerChoice = Math.floor(Math.random() * choices.length);
   return choices[computerChoice];
@@ -70,6 +73,4 @@ function playGame() {
 
 }
 
-if(confirm('startgame')){
-let startGame  = setInterval(() => {playGame()}, 1000)
-}
+

@@ -5,4 +5,5 @@ const getComputerChoice = () => {
     return choices[computerChoice]
 }
 
-console.log(getComputerChoice())
+const getHumanChoice = prompt('choose (rock, paper, scissors)')
+

@@ -19,7 +19,7 @@
             <div class="player-section">
                 <p>player</p>
 
-                <div class="healthbar">
+                <div class="healthbar players-health">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -36,7 +36,7 @@
             <div class="computer-section">
                 <p>computer</p>
 
-                <div class="healthbar">
+                <div class="healthbar computers-health">
                     <div class="bar"></div>
                     <div class="bar"></div>
                     <div class="bar"></div>
@@ -51,28 +51,37 @@
 
         <div class="game-section">
             <div class="playerchoice">
-                <img src="images/paper.png" alt="">
+                <img src="images/paper.png" alt="" id="playersChoiceImg">
             </div>
     
             <div class="result-box">
-                <h2>paper beat rock</h2>
+                <h2 id="result-text">paper beat rock</h2>
             </div>
     
             <div class="computerchoice">
-                <img src="images/rocks.png" alt="">
+                <img src="images/rock.png" alt="" id="computersChoiceImg">
             </div>
         </div>
 
+        <div class="restart-game hide">
+            <h1>GAME OVER</h1>
+
+            <h2 id="winner-text">player wins</h2>
+
+            <button onclick="restartGame()">Play Again</button>
+        </div>
+
         <div class="playerSelection">
-            <div class="option">
-                <img src="images/rocks.png" alt="rock picture">
-            </div>
-            <div class="option">
-                <img src="images/paper.png" alt="paper picture">
-            </div>
-            <div class="option">
-                <img src="images/scissors.png" alt="scissors picture">
-            </div>
+            <button class="option" onclick="playGame('rock', 'images/rock.png')">
+                <img src="images/rock.png" alt="rock picture"  class="choice" >
+            </button>
+            <button class="option" onclick="playGame('paper', 'images/paper.png')">
+                <img src="images/paper.png" alt="paper picture" class="choice" >
+            </button>
+            <button class="option" onclick="playGame('scissors', 'images/scissors.png')">
+                <img src="images/scissors.png" alt="scissors picture"class="choice" >
+            </button>
+
         </div>
 
 

@@ -46,11 +46,11 @@ function checkWinner(){
 function gameFinsided(){
 
   if(gameOver){
-    console.log('game over', checkWinner())
 
     choiceBtns.forEach(button => button.disabled = true)
 
     gameDisplay.classList.add('hide')
+    
     restartDisplay.classList.remove('hide')
   }
 
@@ -133,5 +133,4 @@ function playGame(playersChoice, image){
     resultText.textContent = 'scissors beats paper'
   }
 
-  console.log(playerHealth, computerHealth)
 }

@@ -31,13 +31,13 @@ const winnerResultText = document.getElementById('winner-text')
 const choiceBtns = document.querySelectorAll('.option')
 
 function checkWinner(){
-  if(playerHealth <= 0) {
-    console.log('computer wins')
+  if(playerHealth < 1) {
+    winnerResultText.textContent = ('computer wins')
     gameOver = true
   }
   
-  if(computerHealth <= 0) {
-    console.log('player wins')
+  if(computerHealth < 1) {
+    winnerResultText.textContent = ('player wins')
     gameOver = true
   }
 
